@@ -25,7 +25,7 @@ public class LoginTest
 		driver.findElement(By.id("password")).sendKeys("Ramaelil@2816");
 		Thread.sleep(3000);
 		driver.findElement(By.linkText("w0 pr ln3 p16 remember")).click();
-		String expected="please enter the password";
+		String expected="Please enter the password";
 		String actual=driver.findElement(By.id("error")).getText();
 		if(actual.equals(expected))
 		{
