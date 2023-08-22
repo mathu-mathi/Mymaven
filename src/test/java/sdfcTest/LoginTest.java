@@ -22,7 +22,7 @@ public class LoginTest
 		 
 		driver.get("https://login.salesforce.com");
 		driver.findElement(By.id("username")).sendKeys("mathu@ram.com");
-		driver.findElement(By.id("password")).sendKeys("Ramaelil@2816");
+		driver.findElement(By.id("password")).sendKeys("Admin@123");
 		Thread.sleep(3000);
 		driver.findElement(By.linkText("w0 pr ln3 p16 remember")).click();
 		String expected="Please enter the password";
