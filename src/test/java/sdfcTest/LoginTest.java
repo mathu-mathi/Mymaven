@@ -14,15 +14,17 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class LoginTest 
 {
 	public void Login() throws InterruptedException
-	{ 
+	{
 		//Mathu mathi thangavel
+		//Mathu
+//534f448 (firstcommit on login page)
 	   	WebDriverManager.chromedriver().setup();
 		WebDriver driver=new ChromeDriver();
 		 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 		 
 		driver.get("https://login.salesforce.com");
-		driver.findElement(By.id("username")).sendKeys("mathu@ram.com");
-		driver.findElement(By.id("password")).sendKeys("Admin@123");
+		driver.findElement(By.id("username")).sendKeys("Mathu@ram.com");
+		driver.findElement(By.id("Password")).sendKeys("Admin@123");
 		Thread.sleep(3000);
 		driver.findElement(By.linkText("w0 pr ln3 p16 remember")).click();
 		String expected="Please enter the password";
@@ -46,6 +48,10 @@ public class LoginTest
              System.out.println("User menu dropdown is not available.");
          }
          userMenu.click();
+	public void login()
+	{
+	}
 	
+	}
 	}
 }
