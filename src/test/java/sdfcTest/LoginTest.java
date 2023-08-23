@@ -23,8 +23,8 @@ public class LoginTest
 		 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 		 
 		driver.get("https://login.salesforce.com");
-		driver.findElement(By.id("Username")).sendKeys("Mathu@ram.com");
-		driver.findElement(By.id("password")).sendKeys("Admin@123");
+		driver.findElement(By.id("username")).sendKeys("Mathu@ram.com");
+		driver.findElement(By.id("Password")).sendKeys("Admin@123");
 		Thread.sleep(3000);
 		driver.findElement(By.linkText("w0 pr ln3 p16 remember")).click();
 		String expected="Please enter the password";
@@ -48,6 +48,10 @@ public class LoginTest
              System.out.println("User menu dropdown is not available.");
          }
          userMenu.click();
+	public void login()
+	{
+	}
 	
+	}
 	}
 }
