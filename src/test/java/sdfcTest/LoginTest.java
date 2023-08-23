@@ -46,6 +46,10 @@ public class LoginTest
              System.out.println("User menu dropdown is not available.");
          }
          userMenu.click();
+	public void login()
+	{
+	}
 	
+	}
 	}
 }
