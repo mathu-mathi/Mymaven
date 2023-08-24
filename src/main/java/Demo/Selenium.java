@@ -14,7 +14,7 @@ public class Selenium {
 	public static void main(String[] args) throws InterruptedException 
 	{
 		WebDriverManager.chromedriver().setup();
-		WebDriver driver=new ChromeDriver();
+		//WebDriver driver=new ChromeDriver();
 		driver.get("https://Login.salesforce.com");
 		
 		driver.get("https://selenium-prd.firebaseapp.com/");
