@@ -22,14 +22,6 @@ public class TestNG
 	        // Login to Salesforce
 	        // ...
 	    }
-
-	    @Test(expected = "testLogin")
-	    public void testClickAccountsLink() {
-	        // Click on Accounts link
-	        // ...
-	    }
-
-	    @Test(dependsOnMethods = "testClickAccountsLink")
 	    public void testCreateNewView() {
 	        // Click on create new view link
 	        WebElement createNewViewLink = driver.findElement(By.linkText("Create New View"));
@@ -59,10 +51,3 @@ public class TestNG
 	}
 	
 
-
-
-
-
-
-
-}
