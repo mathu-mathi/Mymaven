@@ -1,4 +1,4 @@
-package sdfcTest;
+package Demo;
 
 import java.awt.AWTException;
 import java.awt.Robot;
@@ -12,8 +12,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class ET {
-
+public class Robot {
 	public static void main(String[] args) throws AWTException {
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver=new ChromeDriver();
@@ -50,3 +49,4 @@ public class ET {
 	      r.keyRelease(KeyEvent.VK_ENTER);
 	   }
 	}
+}

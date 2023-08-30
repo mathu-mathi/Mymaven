@@ -11,13 +11,11 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class LoginTest 
+public class LoginTest extends Reusable
 {
-	public void Login() throws InterruptedException
+	public static void main(String[] args) throws InterruptedException
 	{
-		//Mathu mathi thangavel
-		//Mathu
-//534f448 (firstcommit on login page)
+		
 	   	WebDriverManager.chromedriver().setup();
 		WebDriver driver=new ChromeDriver();
 		 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
@@ -25,10 +23,11 @@ public class LoginTest
 		driver.get("https://login.salesforce.com");
 		driver.findElement(By.id("username")).sendKeys("Mathu@ram.com");
 		driver.findElement(By.id("Password")).sendKeys("Admin@123");
-		Thread.sleep(3000);
 		driver.findElement(By.linkText("w0 pr ln3 p16 remember")).click();
-		String expected="Please enter the password";
+		driver.manage().window().maximize();
+		String expected="Please enter the password.If you still can't log in,contact your administrator";
 		String actual=driver.findElement(By.id("error")).getText();
+		
 		if(actual.equals(expected))
 		{
          System.out.println("Matched");
@@ -37,7 +36,16 @@ public class LoginTest
         {
 	System.out.println("failed");
 	  }
-
+		String errormsg=driver.findElement(By.xpath("//div[@id='error']")).getText();
+		if(errormsg.equals("please check your username and password.If you still can't log in,contact your administrator"))
+		{
+			System.out.println("error is displayed");
+		}
+			else
+				
+			{
+				System.out.println("error is not displayed");
+			}
 		 WebElement userMenu = driver.findElement(By.id("userNav-arrow"));
          if (userMenu.isDisplayed())
          {
@@ -48,10 +56,9 @@ public class LoginTest
              System.out.println("User menu dropdown is not available.");
          }
          userMenu.click();
-	public void login()
-	{
+         Thread.sleep(2000);
+         WebElement logout=driver.findElement(By.xpath("//a[@title='Logout']"));
+         logout.click();
 	}
 	
-	}
-	}
 }
