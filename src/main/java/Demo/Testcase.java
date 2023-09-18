@@ -15,7 +15,7 @@ public class Testcase {
 		WebDriver driver=new ChromeDriver();
 		driver.get("https://login.salesforce.com");
 		driver.findElement(By.id("username")).sendKeys("mathu@ram.com");
-		driver.findElement(By.id("password")).sendKeys("Ramaelil@2816");
+		driver.findElement(By.id("password")).sendKeys("admin123");
 		driver.findElement(By.linkText("w0 pr ln3 p16 remember")).click();
 		String expected="please enter the password";
 		String actual=driver.findElement(By.id("error")).getText();
@@ -30,7 +30,7 @@ public class Testcase {
       driver.findElement(By.className("menuButtonMenuLink")).click();
       driver.findElement(By.id("forgot_password_link")).click();
       
-      driver.findElement(By.xpath("//input[@id="lastName"]")).getText()
+      driver.findElement(By.xpath("//input[@id='lastName']")).getText();
       
 }
 	}
