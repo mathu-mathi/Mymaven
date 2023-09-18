@@ -87,4 +87,10 @@ public static String getScreenShot(WebDriver driver)throws IOException
 	return path;
 
 }
+
+
+public static void waitForElementToDisappear(WebDriver driver, boolean verifyDropDown) {
+	// TODO Auto-generated method stub
+	
+}
 }
